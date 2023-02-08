@@ -40,6 +40,29 @@ const team = [
     },
 ];
 
+for (const property of team) {
+    console.log(property.name);
+    console.log(property.role);
+    console.log(property.pic);
+}
+
 for (const member of team) {
-    console.log(member);
+   
+    document.getElementById("card-container").innerHTML += `
+    
+    <div class="col-4">
+
+            <div class="card" style="width: 100%;">
+              
+              <img src="#" class="card-img-top" alt="#">
+              <div class="card-body">
+                <h5 class="member-name">${member.name}</h5>
+                <p class="member-role">${member.role}</p>
+                <p class="member-pic">${member.pic}</p>
+              </div>
+
+            </div>
+
+          </div>  
+    `;
 }
